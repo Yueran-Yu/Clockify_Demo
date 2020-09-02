@@ -29,7 +29,6 @@ a {
   padding: 80px 0;
   height: 100px;
   background-color: var(--g_water_blue);
-  border: 1px solid black;
 }
 
 nav {
@@ -106,8 +105,6 @@ a button:hover {
 }
 
 .footer_site_links {
-
-
   width: 75vw;
   margin: 0 auto 0 auto;
   display: grid;
@@ -115,23 +112,19 @@ a button:hover {
   grid-gap: 2em;
   /* grid-auto-columns:minmax(150px, auto); */
   grid-auto-rows: minmax(150px, auto);
-
-
 }
-
 
 .footer_site_links li {
   height: 32px;
   font-size: 15px;
 }
-.footer_site_links .items_container_1{
+.footer_site_links .items_container_1 {
   justify-self: start;
 }
 
-.footer_site_links .items_container{
+.footer_site_links .items_container {
   justify-self: end;
 }
-
 
 .footer_site_links span {
   display: block;
@@ -156,18 +149,50 @@ a button:hover {
   display: flex;
   float: left;
 }
-.footer_rights_and_terms .footer__terms a{
+.footer_rights_and_terms .footer__terms a {
   display: flex;
   float: right;
   font-family: Arial, Helvetica, sans-serif;
   color: rgba(122, 150, 167, 0.788) !important;
-  padding-left:20px;
+  padding-left: 20px;
 }
 
-hr{
-  width:75vw;
+hr {
+  width: 75vw;
   margin: 0 auto;
-  border-width:0;
+  border-width: 0;
   height: 1px;
-  background-color:rgba(230, 233, 235, 0.925);
+  background-color: rgba(230, 233, 235, 0.925);
 }
+
+.video_container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top:25px;
+  height:0px;
+}
+
+.video_container iframe{
+  position: absolute;
+  left: 0px;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  height: 100%;
+  width:100% ;
+}
+
+.time_management_features, .time_tracking_apps, .why_clockify, .free_forever {
+  height: 100%;
+
+}
+
+.time_tracker, .time_management_content,.tracking_apps_content, .why_content, .free_content{
+  margin: 0 auto;
+  width: 75vw;
+}
+
+
+
+
+
