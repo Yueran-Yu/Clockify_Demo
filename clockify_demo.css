@@ -6,9 +6,13 @@
 
 :root {
   --g_blue: #049ff2;
+  --g_light_blue: #3aabe7bb;
   --g_orange: hsl(46, 88%, 74%);
   --g_water_blue: hsla(191, 68%, 94%, 0.521);
-  --g_font_color: hsla(0, 0%, 24%, 0.651);
+  --g_font_color: hsla(0, 1%, 15%, 0.651);
+  --g_transtration: all 0.3s linear;
+  --g_double_light: hsla(203, 44%, 93%, 0.918);
+  --g_white: hsla(0, 0%, 97%, 0.973);
 }
 body {
   position: relative;
@@ -31,13 +35,81 @@ a {
   background-color: var(--g_water_blue);
 }
 
+/* nav bar  */
 nav {
   width: 100%;
-  height: 84px;
+  height: 100%;
   background-color: var(--g_water_blue);
 }
 
 .nav_center {
+  padding: 16px;
+  display: block;
+  align-items: center;
+  width: 85vw;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.nav_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav_items ul {
+  margin: 1rem 0;
+}
+
+.nav_items li {
+  text-transform: capitalize;
+  padding: 16px 16px;
+}
+
+.nav_items li a {
+  font-size: 1rem;
+  display: block;
+  padding: 16px 16px;
+  transition: var(--g_transtration);
+  color: var(--g_font_color);
+}
+
+.nav_items li a:hover {
+  font-style: italic;
+  font-weight: bold;
+  padding-right: 36px;
+  background: var(--g_double_light);
+}
+
+.nav_items .sign_up {
+  color: rgba(114, 191, 236, 0.932);
+  width: 103px;
+  height: 38px;
+  margin-top: 16px;
+  background-color: aliceblue;
+  border: 2px solid rgba(114, 191, 236, 0.932);
+  border-radius: 5px;
+  font-size: medium;
+  transition: var(--g_transtration);
+}
+
+.nav_items .sign_up:hover {
+  background-color: var(--g_blue);
+  color: white;
+  font-weight: bold;
+}
+
+/* .nav_items {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: var(--g_transtration);
+} */
+
+/* .nav_center {
   height: 100%;
   padding: 16px;
   display: flex;
@@ -46,41 +118,45 @@ nav {
   width: 85%;
   margin: auto;
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
-.clock_logo {
+/* .clock_logo {
   height: 100%;
   line-height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
 
-.clock_logo li {
+/* .clock_logo li {
   display: inline-block;
   padding-left: 40px;
-}
+} */
 
-li a {
+/* li a {
   color: var(--g_font_color);
   font-family: Arial, Helvetica, sans-serif;
   text-transform: capitalize;
-}
+  transition: var(--g_transtration);
+} */
 
-li a:hover {
-  color: var(--g_blue);
-}
+/* li a:hover {
+  text-shadow: 1px 1px 1px #9ae4d1;
+  color: var(--g_light_blue);
+} */
 
-.register a {
+/* .register a {
   padding-left: 40px;
-  /* font-family: Arial, Helvetica, sans-serif; */
   color: var(--g_font_color);
-}
-.register a:hover {
-  color: var(--g_blue);
-}
+  transition: var(--g_transtration);
+} */
 
-.register a button {
+/* .register a:hover {
+  color: var(--g_light_blue);
+  text-shadow: 1px 1px 1px #9ae4d1;
+} */
+
+/* .register a button {
   color: rgba(114, 191, 236, 0.932);
   width: 103px;
   height: 38px;
@@ -88,11 +164,35 @@ li a:hover {
   border: 2px solid rgba(114, 191, 236, 0.932);
   border-radius: 5px;
   font-size: medium;
-}
+  transition: var(--g_transtration);
+} */
 
-a button:hover {
+/* a button:hover {
   background-color: var(--g_blue);
   color: white;
+  font-weight: bold;
+} */
+
+nav {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav_logo button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  transition: var(--g_transtration);
+}
+
+.nav_logo button:hover {
+  transform: scale(1.5, 1.5);
+}
+
+@media screen and (min-width: 925px) {
+  body{
+    display: none;
+  }
 }
 
 .footer {
@@ -109,7 +209,7 @@ a button:hover {
   margin: 0 auto 0 auto;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-  grid-gap: 2em;
+  grid-gap: 1em;
   /* grid-auto-columns:minmax(150px, auto); */
   grid-auto-rows: minmax(150px, auto);
 }
@@ -168,31 +268,32 @@ hr {
 .video_container {
   position: relative;
   padding-bottom: 56.25%;
-  padding-top:25px;
-  height:0px;
+  padding-top: 25px;
+  height: 0px;
 }
 
-.video_container iframe{
+.video_container iframe {
   position: absolute;
   left: 0px;
-  top:0px;
-  right:0px;
-  bottom:0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
   height: 100%;
-  width:100% ;
+  width: 100%;
 }
 
-.time_management_features, .time_tracking_apps, .why_clockify, .free_forever {
+.time_management_features,
+.time_tracking_apps,
+.why_clockify,
+.free_forever {
   height: 100%;
-
 }
 
-.time_tracker, .time_management_content,.tracking_apps_content, .why_content, .free_content{
+.time_tracker,
+.time_management_content,
+.tracking_apps_content,
+.why_content,
+.free_content {
   margin: 0 auto;
   width: 75vw;
 }
-
-
-
-
-
