@@ -69,7 +69,7 @@ nav {
   padding: 8px 0 0 0;
   display: block;
   align-items: center;
-  width: 85vw;
+  width: 60vw;
   margin: 0 auto;
   letter-spacing: 1px;
   text-align: center;
@@ -202,7 +202,7 @@ nav {
   transform: scale(1.5, 1.5);
 }
 
-@media screen and (min-width: 925px) {
+@media screen and (min-width: 1100px) {
   .nav_logo {
     display: none;
   }
@@ -309,6 +309,18 @@ hr {
   background-color: rgba(230, 233, 235, 0.925);
 }
 
+.image_container {
+  position: relative;
+  padding-bottom: 6.25%;
+  width: 75vw;
+}
+.image_container .time_tracker_img {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+}
+
 .video_container {
   position: relative;
   padding-bottom: 56.25%;
@@ -358,14 +370,15 @@ hr {
   text-align: center;
 }
 
-p.slim_font {
+.describle_title {
   font-size: 40px;
   font-family: "Optima", sans-serif;
   font-weight: 1px !important;
   font-style: oblique;
+  padding-bottom: 16px;
 }
 
-p {
+.describle_content {
   font-size: 18px;
   letter-spacing: 2px;
   word-spacing: 2px;
@@ -374,16 +387,21 @@ p {
   margin: 0 auto 2rem auto;
 }
 
-.time_tracker_content,
-.time_management_content,
-.tracking_apps_content,
-.why_content,
-.free_content,
-.millions_users_content,
-.start_tracking_content {
+.list_title {
+  text-transform: uppercase;
+  padding-bottom: 8px;
 }
 
+.list_item {
+  font-size: 16px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  line-height: 150%;
+}
+
+
 .time_tracker_button button {
+  text-transform: uppercase;
   width: auto;
   font-size: 20px;
   color: var(--g_white);
@@ -392,4 +410,17 @@ p {
   padding: 10px 15px;
   border-radius: 5%;
   box-shadow: 2px 1.5px 5px var(--g_font_color_dark_blue);
+}
+
+.small_description {
+  display: block;
+  font-size: 10px;
+  margin: 10px 0 50px 0;
+  color:var(--g_font_color_dark_blue);
+}
+
+.management_features {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 2fr 2fr;
 }
