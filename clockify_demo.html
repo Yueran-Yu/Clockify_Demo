@@ -205,7 +205,7 @@
   </div>
   </div>
   <hr>
-  <div class="contact_us_box">
+  <div class="contact_us_box hidden_box">
     <div class="close_bar">
       <div class="contact">Contact Us</div>
       <div class="close_icon"></div>
@@ -216,7 +216,15 @@
       <input type="text" name="contact" id="email" value="email"><br>
       <label for="help_question">How Can We Help You?</label>
       <input type="text" name="contact" id="help_question" value="help_question"><br>
+      <form action="get">
+        <label for="myfile">Attachments</label>
+        <input type="file" id="myfile" name="myfile"><br><br>
+        <input type="submit">
+      </form>
+    </div>
 
+    <div class="send_bar">
+      <button class="send_btn">Send</button>
     </div>
   </div>
   <div class="help">

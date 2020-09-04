@@ -752,6 +752,11 @@ hr {
   border-radius: 50px;
   border: none;
 }
+
+.hidden_box{
+  visibility: hidden;
+}
+
 .help .help_content {
   position: absolute;
   width: 100%;
@@ -775,6 +780,7 @@ hr {
   padding: 6px;
 }
 
+
 .contact_us_box {
   right: 1rem;
   bottom: 1rem;
@@ -795,7 +801,7 @@ hr {
   height: 50px;
   width: 100%;
   border-radius: 12px 12px 0 0;
-  background-color:  rgb(66, 132, 207);
+  background-color: rgb(66, 132, 207);
 }
 
 .close_bar .contact {
@@ -815,10 +821,42 @@ hr {
   right: 20px;
   width: 20px;
   height: 5px;
-  background-color:var(--g_white);
+  background-color: var(--g_white);
 }
 
-.contact_infotmation{
+.contact_infotmation {
   display: flex;
   flex-direction: column;
+  justify-items: center;
+}
+
+.contact_infotmation input {
+  width: 90%;
+  height: 50px;
+}
+
+.send_bar {
+  position: absolute;
+  display: flex;
+  justify-items: end;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(66, 132, 207);
+  border-radius: 0 0 12px 12px;
+}
+
+.send_bar .send_btn {
+  height: 30px;
+  width: 60px;
+  margin-left:75%;
+  margin-top:10px;
+  border: none;
+  bottom:30px;
+  right:20px;
+  border-radius: 3px;
+  border:0;
+  background-color: rgb(255, 255, 255);
+  color:var(--g_blue);
+  font-weight: bold;
 }

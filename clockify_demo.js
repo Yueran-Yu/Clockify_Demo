@@ -27,6 +27,7 @@ const track_time_list = [
 window.addEventListener("DOMContentLoaded", function () {
   navButtonEffect()
   multiTrackTimeBoard(track_time_list)
+  toggleHelpMessage()
 })
 
 const content_page = document.querySelector(".content_page")
@@ -47,7 +48,7 @@ function navButtonEffect() {
   const nav_button = document.querySelector('.nav_logo')
   const nav_bar = document.querySelector('.nav_items')
   nav_button.addEventListener('click', () => {
-    console.log("worked")
+    // console.log("worked")
     nav_bar.classList.toggle('nav_show')
   })
 }
@@ -68,6 +69,20 @@ function multiTrackTimeBoard(track_time_board) {
   why_content.innerHTML = track_time_items
 }
 
+function toggleHelpMessage() {
+  const close_help_message = document.querySelector('.close_icon')
+  const contact_us_box = document.querySelector('.contact_us_box')
+  const help_btn = document.querySelector('.help')
+  help_btn.addEventListener('click', () => {
+    contact_us_box.classList.remove('hidden_box')
+    help_btn.classList.add('hidden_box')
+  })
+
+  close_help_message.addEventListener('click', () =>{
+    contact_us_box.classList.add('hidden_box')
+    help_btn.classList.remove('hidden_box')
+  } )
+}
 
 
 
