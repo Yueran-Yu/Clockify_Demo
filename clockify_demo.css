@@ -189,12 +189,29 @@ nav {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+@keyframes heart_beats {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .nav_logo button {
   background-color: transparent;
   border: none;
   cursor: pointer;
   display: flex;
   transition: var(--g_transtration);
+  animation-name: heart_beats;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 .nav_logo button:hover {
@@ -370,7 +387,7 @@ hr {
 }
 
 .describle_title {
-  font-size: 40px;
+  font-size: 50px;
   font-family: "Optima", sans-serif;
   font-weight: 1px !important;
   font-style: oblique;
@@ -400,7 +417,7 @@ hr {
   font-family: "Optima", sans-serif;
 }
 
-.list_item img {
+.free_forever_list img , .list_item img {
   width: 13px;
   height: 13px;
 }
@@ -485,7 +502,6 @@ hr {
     align-items: center;
     justify-content: center;
   }
-
 }
 
 @media screen and (min-width: 1000px) {
@@ -547,4 +563,68 @@ hr {
   .management_item_6 {
     order: 3;
   }
+}
+
+.apps_title {
+  color: var(--g_font_color_dark_blue);
+  font-weight: bold;
+  font-size: 1rem;
+  display: block;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.apps_button {
+  height: 40px;
+  width: 120px;
+  margin: 0 10px;
+  border: none;
+  background-color: var(--g_font_color_dark_blue);
+  background-image: linear-gradient(
+    to right,
+    rgb(60, 139, 243),
+    rgb(70, 173, 233)
+  );
+  border-radius: 5px;
+  font-size: 18px;
+  color: var(--g_white);
+}
+
+.start_tracking_time {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  font-size: 1rem;
+  color: var(--g_font_color);
+}
+
+.start_tracking_time li {
+  padding: 0 15px;
+}
+
+.free_forever_list {
+  padding-left: 50px;
+  text-align: left;
+}
+.free_forever_list li {
+  padding: 10px 0;
+}
+
+.free_content {
+  display: flex;
+  justify-items: center;
+  align-self: start;
+}
+.free_forever_letter {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: bolder;
+  font-size: 72px;
+  background: -webkit-linear-gradient(rgb(179, 201, 240), rgb(14, 165, 211));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.last_free_item{
+  padding-top:15px;
+  color: var(--g_blue);
 }
