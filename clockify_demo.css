@@ -310,7 +310,7 @@ nav {
   padding-left: 15px;
 }
 
-/* .footer_rights_and_terms .footer__terms  li {
+/* .footer_rights_and_terms .footer__terms li {
   display: flex;
   float: right;
   color: var(--g_white) !important;
@@ -417,7 +417,8 @@ hr {
   font-family: "Optima", sans-serif;
 }
 
-.free_forever_list img , .list_item img {
+.free_forever_list img,
+.list_item img {
   width: 13px;
   height: 13px;
 }
@@ -430,7 +431,7 @@ hr {
   background-color: var(--g_blue);
   border: none;
   padding: 10px 15px;
-  border-radius: 5%;
+  border-radius: 7px;
   box-shadow: 2px 1.5px 5px var(--g_font_color_dark_blue);
 }
 
@@ -595,7 +596,7 @@ hr {
   justify-content: center;
   padding-bottom: 20px;
   font-size: 1rem;
-  color: var(--g_font_color);
+  color: var(--g_font_color_dark_blue);
 }
 
 .start_tracking_time li {
@@ -624,7 +625,74 @@ hr {
   -webkit-text-fill-color: transparent;
 }
 
-.last_free_item{
-  padding-top:15px;
+.last_free_item {
+  padding-top: 15px;
   color: var(--g_blue);
+}
+
+.why_content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.why_track_time-item {
+  margin: 1rem 0;
+  width: 60vw;
+  border-radius: 10px;
+}
+
+.why_content article:nth-child(even) {
+  background-color: rgb(255, 255, 255);
+  margin-left: 20%;
+  color: var(--g_font_color_dark_blue);
+}
+
+.why_content article:nth-child(odd) {
+  background-color: rgba(151, 224, 255, 0.836);
+  color: var(--g_white);
+}
+
+.why_content article:nth-child(odd) h3, .why_content article:nth-child(odd) p{
+  text-shadow: 1px 1px 2px rgb(8, 6, 109);
+}
+
+.why_track_time-item h3{
+  margin-bottom: 1rem;;
+}
+
+.why_track_time-item p{
+  font-size:1rem;
+  text-align: left;
+}
+
+.why_track_time-item .why_link {
+  display: block;
+  float: right;
+  margin-bottom:2rem;
+  margin-right:3rem;
+}
+
+.why_track_time-item .why_link:hover {
+  display: block;
+  float: right;
+  margin-bottom:2rem;
+  margin-right:3rem;
+  animation-name: back_and_forth;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+ @keyframes back_and_forth {
+  0% {
+    padding-right:0px;
+  }
+
+  50% {
+    padding-right:20px;
+  }
+
+  100% {
+    padding-right:0px;
+  }
 }
