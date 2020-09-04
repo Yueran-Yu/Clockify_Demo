@@ -614,7 +614,7 @@ hr {
 .free_content {
   display: flex;
   justify-items: center;
-  align-self: start;
+  justify-content: center;
 }
 .free_forever_letter {
   font-family: "Comic Sans MS", cursive, sans-serif;
@@ -623,6 +623,47 @@ hr {
   background: -webkit-linear-gradient(rgb(179, 201, 240), rgb(14, 165, 211));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation-name: rotate_letter;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate_letter {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(5deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+
+  70% {
+    transform: rotate(-5deg);
+  }
+
+  80% {
+    transform: rotate(-10deg);
+  }
+  90% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .last_free_item {
@@ -646,53 +687,60 @@ hr {
   background-color: rgb(255, 255, 255);
   margin-left: 20%;
   color: var(--g_font_color_dark_blue);
+  box-shadow: 3px 3px 6px 1px rgb(97, 191, 253);
+  transition: var(--g_transtration);
 }
+
 
 .why_content article:nth-child(odd) {
   background-color: rgba(151, 224, 255, 0.836);
   color: var(--g_white);
+  box-shadow: 3px 3px 6px 1px rgb(246, 248, 248);
 }
 
-.why_content article:nth-child(odd) h3, .why_content article:nth-child(odd) p{
+.why_content article:nth-child(odd) h3,
+.why_content article:nth-child(odd) p {
   text-shadow: 1px 1px 2px rgb(8, 6, 109);
 }
 
-.why_track_time-item h3{
-  margin-bottom: 1rem;;
+
+
+.why_track_time-item h3 {
+  margin-bottom: 1rem;
 }
 
-.why_track_time-item p{
-  font-size:1rem;
+.why_track_time-item p {
+  font-size: 1rem;
   text-align: left;
 }
 
 .why_track_time-item .why_link {
   display: block;
   float: right;
-  margin-bottom:2rem;
-  margin-right:3rem;
+  margin-bottom: 2rem;
+  margin-right: 3rem;
 }
 
 .why_track_time-item .why_link:hover {
   display: block;
   float: right;
-  margin-bottom:2rem;
-  margin-right:3rem;
+  margin-bottom: 2rem;
+  margin-right: 3rem;
   animation-name: back_and_forth;
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 
- @keyframes back_and_forth {
+@keyframes back_and_forth {
   0% {
-    padding-right:0px;
+    padding-right: 0px;
   }
 
   50% {
-    padding-right:20px;
+    padding-right: 10px;
   }
 
   100% {
-    padding-right:0px;
+    padding-right: 0px;
   }
 }
