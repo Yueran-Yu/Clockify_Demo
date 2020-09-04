@@ -11,7 +11,7 @@
   --g_water_blue: hsla(202, 60%, 18%, 0.904);
   --g_font_color: hsla(0, 0%, 100%, 0.836);
   --g_font_color_dark_blue: hsla(214, 69%, 18%, 0.904);
-  --g_transtration: all 0.3s linear;
+  --g_transtration: all 0.3s ease-in-out;
   --g_double_light: hsl(208, 71%, 89%);
   --g_background_blue: hsla(205, 48%, 91%, 0.596);
   --g_white: hsl(0, 0%, 100%);
@@ -755,6 +755,7 @@ hr {
 
 .hidden_box{
   visibility: hidden;
+  transition: var(--g_transtration);
 }
 
 .help .help_content {
@@ -814,13 +815,23 @@ hr {
   font-size: 18px;
 }
 
+.close_bar .close_icon_box{
+  position: absolute;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  bottom: 16px;
+  right: 20px;
+  background-color: rgba(199, 186, 186, 0.178);
+  border-radius: 2px;
+}
+
 .close_bar .close_icon {
   position: absolute;
   display: flex;
-  bottom: 20px;
-  right: 20px;
   width: 20px;
   height: 5px;
+  bottom: 8px;
   background-color: var(--g_white);
 }
 
@@ -828,11 +839,24 @@ hr {
   display: flex;
   flex-direction: column;
   justify-items: center;
+  margin:0 25px;
+  color:var(--g_font_color_dark_blue);
+  font-size:14px;
 }
 
 .contact_infotmation input {
-  width: 90%;
+  width: 100%;
   height: 50px;
+  border: 2px solid rgba(128, 128, 128, 0.527);
+  border-radius: 7px;
+}
+
+.contact_infotmation label{
+  padding:10px 0;
+}
+
+.contact_infotmation .attach {
+  padding:10px 0;
 }
 
 .send_bar {

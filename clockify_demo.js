@@ -70,7 +70,7 @@ function multiTrackTimeBoard(track_time_board) {
 }
 
 function toggleHelpMessage() {
-  const close_help_message = document.querySelector('.close_icon')
+  const close_help_message = document.querySelector('.close_icon_box')
   const contact_us_box = document.querySelector('.contact_us_box')
   const help_btn = document.querySelector('.help')
   help_btn.addEventListener('click', () => {
