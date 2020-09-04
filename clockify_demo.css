@@ -633,19 +633,19 @@ hr {
     transform: rotate(0deg);
   }
   10% {
-    transform: rotate(5deg);
+    transform: rotate(3deg);
   }
   20% {
-    transform: rotate(10deg);
+    transform: rotate(9deg);
   }
   30% {
-    transform: rotate(15deg);
+    transform: rotate(12deg);
   }
   40% {
-    transform: rotate(10deg);
+    transform: rotate(9deg);
   }
   50% {
-    transform: rotate(5deg);
+    transform: rotate(3deg);
   }
   60% {
     transform: rotate(0deg);
@@ -687,23 +687,20 @@ hr {
   background-color: rgb(255, 255, 255);
   margin-left: 20%;
   color: var(--g_font_color_dark_blue);
-  box-shadow: 3px 3px 6px 1px rgb(97, 191, 253);
+  box-shadow: 2px 2px 3px 1px rgb(97, 191, 253);
   transition: var(--g_transtration);
 }
-
 
 .why_content article:nth-child(odd) {
   background-color: rgba(151, 224, 255, 0.836);
   color: var(--g_white);
-  box-shadow: 3px 3px 6px 1px rgb(246, 248, 248);
+  box-shadow: 2px 2px 3px 1px rgb(246, 248, 248);
 }
 
 .why_content article:nth-child(odd) h3,
 .why_content article:nth-child(odd) p {
   text-shadow: 1px 1px 2px rgb(8, 6, 109);
 }
-
-
 
 .why_track_time-item h3 {
   margin-bottom: 1rem;
@@ -743,4 +740,85 @@ hr {
   100% {
     padding-right: 0px;
   }
+}
+
+.help {
+  right: 2rem;
+  bottom: 2rem;
+  width: 120px;
+  height: 50px;
+  position: fixed;
+  z-index: 1;
+  border-radius: 50px;
+  border: none;
+}
+.help .help_content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: rgb(75, 149, 233);
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: var(--g_white);
+  font-size: 20px;
+  border: 3px solid rgba(57, 119, 190, 0.774);
+}
+
+.help_content img {
+  width: 35px;
+  height: 35px;
+  padding: 6px;
+}
+
+.contact_us_box {
+  right: 1rem;
+  bottom: 1rem;
+  width: 320px;
+  height: 500px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.contact_us_box .close_bar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  background-color:  rgb(66, 132, 207);
+}
+
+.close_bar .contact {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  color: var(--g_white);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.close_bar .close_icon {
+  position: absolute;
+  display: flex;
+  bottom: 20px;
+  right: 20px;
+  width: 20px;
+  height: 5px;
+  background-color:var(--g_white);
+}
+
+.contact_infotmation{
+  display: flex;
+  flex-direction: column;
 }
