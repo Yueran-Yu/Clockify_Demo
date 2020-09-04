@@ -39,7 +39,6 @@ li a {
   letter-spacing: 1px;
   text-transform: capitalize;
   transition: var(--g_transtration);
-  letter-spacing: 1px;
 }
 
 li a:hover {
@@ -95,7 +94,7 @@ nav {
 .nav_items li a {
   font-size: 1rem;
   display: block;
-  padding: 16px 16px;
+  padding: 8px 16px;
   transition: var(--g_transtration);
   color: var(--g_font_color);
 }
@@ -108,7 +107,7 @@ nav {
   color: var(--g_blue);
   width: 103px;
   height: 38px;
-  margin: 0 0 16px 0;
+  margin: 10px 0 16px 0;
   background-color: aliceblue;
   border: none;
   border-radius: 5px;
@@ -285,13 +284,13 @@ nav {
 
 .footer_rights_and_terms .footer_rights {
   font-size: 12px;
-  width:200px;
+  width: 200px;
   text-align: left;
 }
 
 .footer_rights_and_terms .footer_terms li {
   display: inline;
-  padding-left:15px;
+  padding-left: 15px;
 }
 
 /* .footer_rights_and_terms .footer__terms  li {
@@ -389,7 +388,7 @@ hr {
 
 .list_title {
   text-transform: uppercase;
-  padding-bottom: 8px;
+  padding-bottom: 20px;
 }
 
 .list_item {
@@ -397,8 +396,14 @@ hr {
   letter-spacing: 2px;
   word-spacing: 2px;
   line-height: 150%;
+  padding-left: 20px;
+  font-family: "Optima", sans-serif;
 }
 
+.list_item img {
+  width: 13px;
+  height: 13px;
+}
 
 .time_tracker_button button {
   text-transform: uppercase;
@@ -416,11 +421,130 @@ hr {
   display: block;
   font-size: 10px;
   margin: 10px 0 50px 0;
-  color:var(--g_font_color_dark_blue);
+  color: var(--g_font_color_dark_blue);
 }
 
-.management_features {
+.section_padding {
+  padding-top: 80px;
+}
+
+.grid_container {
+  position: relative;
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 2fr 2fr;
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
+.grid_item {
+  position: relative;
+  width: 55vw;
+  height: 33vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: auto;
+}
+
+.grid_item .management_img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  max-width: 100%;
+  height: auto;
+}
+
+.grid_item .text_item {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.grid_item .text_item ul {
+  text-align: start;
+}
+
+.time_tracker_button {
+  display: block;
+}
+
+@media screen and (min-width: 850px) {
+  .gird_container_2_columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid_item {
+    position: relative;
+    width: 47vw;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+@media screen and (min-width: 1000px) {
+  .gird_container_2_columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    grid-gap: 1rem;
+    justify-content: center;
+    max-width: 70vw;
+    height: auto;
+  }
+
+  .grid_item {
+    position: relative;
+    width: 40vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .grid_item .management_img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+  }
+
+  .grid_item .text_item {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .management_item_1 {
+    order: 1;
+  }
+  .management_item_2 {
+    order: 1;
+  }
+  .management_item_3 {
+    order: 2;
+  }
+  .management_item_4 {
+    order: 1;
+  }
+
+  .management_item_5 {
+    order: 3;
+  }
+  .management_item_6 {
+    order: 3;
+  }
 }
